@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "tox-poetry-practice"
+version = "0.1.0"
+description = ""
+authors = ["Harishkadimi <kadimiharish007@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tox_poetry_practice"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.2"
+tox = "^4.4.7"
+fastapi = "^0.95.0"
+requests = "^2.28.2"
+uvicorn = "^0.21.1"
+flake8 = "^6.0.0"
+mypy = "^1.1.1"
+pytest-cov = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+addopts = "--cov=tox_poetry_practice"
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+mypy_path = "tox_poetry_practice"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
